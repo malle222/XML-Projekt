@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../templates/message.xsl"?>
+<Message>
+    <Text>Hallo Welt!</Text>
+    <Metadata>
+        <Sender>Nutzer1234</Sender>
+        <Date>2024-11-26T11:10:00</Date>
+        <Tags>#examples #hallo-welt #wow #fabulous</Tags>
+        <ReplyTo>msg-q04lpdf-485jfd</ReplyTo>
+    </Metadata>
+</Message>

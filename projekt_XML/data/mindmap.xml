@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../templates/mindmap.xsl"?>
+<Mindmap>
+    <Node id="1" shape="ellipse" color="blue">Vorlesung</Node>
+    <Node id="2" shape="rectangle" color="green">Kapitel 1</Node>
+    <Node id="3" shape="rectangle" color="green">Kapitel 2</Node>
+    <Node id="4" shape="rectangle" color="green">Kapitel 3</Node>
+    <Node id="5" shape="rectangle" color="green">Kapitel 4</Node>
+    <Connections>
+        <Connection from="1" to="2"/>
+        <Connection from="1" to="3"/>
+        <Connection from="1" to="4"/>
+        <Connection from="1" to="5"/>
+    </Connections>
+</Mindmap>
