@@ -7,12 +7,26 @@
             </head>
             <body>
                 <h1>Mindmap</h1>
+                
+                <!-- Knoten anzeigen -->
+                <h2>Knoten</h2>
                 <ul>
-                    <xsl:for-each select="Mindmap/Node">
+                    <xsl:for-each select="Mindmap/Nodes/Node">
                         <li>
                             <xsl:value-of select="." /> 
                             (Form: <xsl:value-of select="@shape" />,
                             Farbe: <xsl:value-of select="@color" />)
+                        </li>
+                    </xsl:for-each>
+                </ul>
+                
+                <!-- Verbindungen anzeigen -->
+                <h2>Verbindungen</h2>
+                <ul>
+                    <xsl:for-each select="Mindmap/Connections/Connection">
+                        <li>
+                            Verbindung von Knoten <xsl:value-of select="@from" />
+                            zu Knoten <xsl:value-of select="@to" />
                         </li>
                     </xsl:for-each>
                 </ul>
