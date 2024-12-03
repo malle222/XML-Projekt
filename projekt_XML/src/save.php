@@ -5,7 +5,9 @@ $parser = new WorldDataParser();
 $filePath = "../data/world_data_v3.csv";
 $data = $parser->parseCSV($filePath);
 
-echo "<pre>";
-print_r($data);
-echo "</pre>";
+if ($parser->saveXML($data)) {
+    echo "Die Datei world_data.xml wurde erfolgreich gespeichert.";
+} else {
+    echo "Fehler beim Speichern der Datei.";
+}
 ?>
