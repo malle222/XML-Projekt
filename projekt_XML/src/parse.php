@@ -1,11 +1,11 @@
 <?php
-require_once "world_data_parser.php";
+require_once "data_handler.php";
 
-$parser = new WorldDataParser();
-$filePath = "../data/world_data_v3.csv";
-$data = $parser->parseCSV($filePath);
+$handler = new WorldDataParser();
+$csvPath = "../data/world_data_v3.csv";
+$parsedData = $handler->parseCSV($csvPath);
 
 echo "<pre>";
-print_r($data);
+print_r($parsedData);
 echo "</pre>";
 ?>

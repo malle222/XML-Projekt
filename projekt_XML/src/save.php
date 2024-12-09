@@ -1,13 +1,13 @@
 <?php
-require_once "world_data_parser.php";
+require_once "data_handler.php";
 
-$parser = new WorldDataParser();
-$filePath = "../data/world_data_v3.csv";
-$data = $parser->parseCSV($filePath);
+$handler = new WorldDataParser();
+$csvPath = "../data/world_data_v3.csv";
+$parsedData = $handler->parseCSV($csvPath);
 
-if ($parser->saveXML($data)) {
-    echo "Die Datei world_data.xml wurde erfolgreich gespeichert.";
+if ($handler->saveXML($parsedData)) {
+    echo "XML Savestatus: erfolgreich";
 } else {
-    echo "Fehler beim Speichern der Datei.";
+    echo "Fehler beim Speichern";
 }
 ?>

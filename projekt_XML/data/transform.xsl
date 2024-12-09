@@ -6,8 +6,7 @@
                 <title>CSV als XML</title>
                 <style>
                     body {
-                        font-family: Arial, sans-serif;
-                        margin: 20px;
+                        font-family: Verdana, sans-serif;
                     }
                     h1 {
                         color: #333;
@@ -26,16 +25,10 @@
                         background-color: #f4f4f4;
                         font-weight: bold;
                     }
-                    tr:nth-child(even) {
-                        background-color: #f9f9f9;
-                    }
-                    tr:hover {
-                        background-color: #f1f1f1;
-                    }
                 </style>
             </head>
             <body>
-                <h1>Daten aus der CSV-Datei</h1>
+                <h1>CSV-Daten</h1>
                 <table>
                     <thead>
                         <tr>

@@ -1,25 +1,25 @@
 <?php
 class WorldDataParser {
-    public function parseCSV($filePath) {
-        if (!file_exists($filePath)) {
-            die("Die Datei $filePath wurde nicht gefunden.");
+    public function parseCSV($csvPath) {
+        if (!file_exists($csvPath)) {
+            die("Die Datei $csvPath wurde nicht gefunden.");
         }
 
-        $data = [];
-        if (($handle = fopen($filePath, "r")) !== false) {
+        $parsedData = [];
+        if (($handle = fopen($csvPath, "r")) !== false) {
             $header = fgetcsv($handle, 1000, ",", '"', "\\");
             while (($row = fgetcsv($handle, 1000, ",", '"', "\\")) !== false) {
-                $data[] = array_combine($header, $row);
+                $parsedData[] = array_combine($header, $row);
             }
             fclose($handle);
         }
 
-        return $data;
+        return $parsedData;
     }
 
-    public function saveXML($data) {
+    public function saveXML($parsedData) {
         $xml = new SimpleXMLElement('<root/>');
-        foreach ($data as $row) {
+        foreach ($parsedData as $row) {
             $item = $xml->addChild('item');
             foreach ($row as $key => $value) {
                 $item->addChild(str_replace(' ', '_', trim($key)), htmlspecialchars(trim($value)));

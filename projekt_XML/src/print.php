@@ -1,12 +1,12 @@
 <?php
-require_once "world_data_parser.php";
+require_once "data_handler.php";
 
-$parser = new WorldDataParser();
+$handler = new WorldDataParser();
 $xmlFilePath = "../data/world_data.xml";
 $xsltFilePath = "../data/transform.xsl";
 
 try {
-    $html = $parser->printXML($xmlFilePath, $xsltFilePath);
+    $html = $handler->printXML($xmlFilePath, $xsltFilePath);
     header("Content-Type: text/html");
     echo $html;
 } catch (Exception $e) {
